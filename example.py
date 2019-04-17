@@ -26,7 +26,6 @@ row = { }
 row['host'] = os.uname()[1]
 row['end'] = '{0}'.format( str(end ))
 row['te'] = '{0}'.format(str(end-start))
-row['battery'] = psutil.sensors_battery()[0]
 row['systemtime'] = datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S')
 row['cpu'] = psutil.cpu_percent(interval=1)
 usage = psutil.disk_usage("/")
